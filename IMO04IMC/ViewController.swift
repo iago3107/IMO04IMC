@@ -24,9 +24,13 @@ class ViewController: UIViewController {
         
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     @IBAction func calculate(_ sender: Any) {
-        if let weight = Double(tfweight.text!), let height = Double(tfheight.text!){
-            imc = weight / (height*height)
+        if let peso = Double((tfweight.text!).replacingOccurrences(of: ",", with: ".")), let altura = Double((tfheight.text!).replacingOccurrences(of: ",", with: ".")) {
+            imc = peso / (altura*altura)
             showResults()
         }
     }
@@ -51,9 +55,10 @@ class ViewController: UIViewController {
                 result = "Obesidade"
                 imagem = "obesidade"
         }
-        lbResult.text = result
+        lbResult.text = "\(Int(imc)): \(result)"
         ivResult.image = UIImage(named: imagem)
         viResult.isHidden = false
+        view.endEditing(true)
     }
 }
 
