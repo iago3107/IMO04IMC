@@ -23,13 +23,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descubra o seu índice de massa corporal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elK-TE-Hc8">
-                                <rect key="frame" x="44.666666666666629" y="134.66666666666666" width="325" height="19"/>
+                                <rect key="frame" x="44.666666666666657" y="134.66666666666666" width="325" height="19"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura (m)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csb-14-XMO">
-                                <rect key="frame" x="237" y="173.66666666666666" width="80.333333333333343" height="22"/>
+                                <rect key="frame" x="237.00000000000003" y="173.66666666666666" width="80.333333333333343" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAS-9z-s2y">
-                                <rect key="frame" x="101.33333333333331" y="251.66666666666663" width="216.33333333333337" height="44"/>
+                                <rect key="frame" x="101.33333333333333" y="251.66666666666663" width="216.33333333333337" height="44"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="mbE-rU-1rw"/>
@@ -49,8 +49,11 @@
                                 <state key="normal" title="Calcular">
                                     <color key="titleColor" red="0.0" green="0.70891863109999997" blue="0.82214087250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fO8-tc-K2g"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taA-HU-ngz">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taA-HU-ngz">
                                 <rect key="frame" x="0.0" y="315.66666666666669" width="414" height="580.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu indice de massa corporal é" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qN-eM-hpd">
@@ -125,6 +128,13 @@
                             <constraint firstItem="taA-HU-ngz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vum-1Q-5Ax"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ivResult" destination="IEF-K3-aF5" id="xdk-bL-C7U"/>
+                        <outlet property="lbResult" destination="Bcs-iE-0gf" id="yEF-kO-lG2"/>
+                        <outlet property="tfheight" destination="cpN-ih-Pa0" id="RAz-Jf-x2Z"/>
+                        <outlet property="tfweight" destination="JIm-RB-X2r" id="rqB-il-fkL"/>
+                        <outlet property="viResult" destination="taA-HU-ngz" id="CKH-hM-lVJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
